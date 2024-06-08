@@ -2,6 +2,8 @@ import React,{useState} from 'react'
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import ColorPalette from './ColorPalette';
+import { Link } from 'react-router-dom';
+
 function Color() {
     
     const [colors, setColors] = useState([
@@ -14,6 +16,7 @@ function Color() {
      <DndProvider backend={HTML5Backend}>
       <ColorPalette colors={colors} setColors={setColors} />
     </DndProvider>   
+    <Link to="/"><button>Go back</button></Link>
     </div>
   )
 }
